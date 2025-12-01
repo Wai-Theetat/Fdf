@@ -6,7 +6,19 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:46:42 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/01 12:46:42 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/01 22:02:44 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "fdf.h"
+
+int	main(int argc, char **argv)
+{
+	(void)argc;
+	(void)argv;
+
+	printf("wtf");
+
+	return (0);
+}
 

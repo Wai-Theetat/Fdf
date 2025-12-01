@@ -6,12 +6,14 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/01 13:23:47 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/01 22:02:24 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 
-# include<fcntl.h>
+# include "../libft/libft.h"
+# include <stdio.h>
+# include <fcntl.h>
 
 #endif

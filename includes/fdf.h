@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/02 21:32:37 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/02 21:37:07 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,18 @@
 
 typedef struct s_point_3D
 {
-
-	
+	double			x;
+	double			y;
+	double			z;
+	unsigned int	map_color;
+	unsigned int	z_color;
 }	t_point_3D;
 
 typedef struct s_point_2D
 {
-	
+	double			x;
+	double			y;
+	unsigned int	rgba;
 }	t_point_2D;
 
 

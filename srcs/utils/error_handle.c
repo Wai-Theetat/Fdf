@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   error_handle.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 17:52:32 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/01 22:52:01 by tdharmar         ###   ########.fr       */
+/*   Created: 2025/12/02 21:06:12 by tdharmar          #+#    #+#             */
+/*   Updated: 2025/12/02 21:15:54 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fdf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	exit_error(char *err_msg)
 {
-	if (!s)
-		return ;
-	if (write(fd, s, ft_strlen(s)) < 0)
-		return ;
+	ft_putstr_fd(err_msg, 2);
+	exit(EXIT_FAILURE);
 }

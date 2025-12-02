@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   valid_checker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 17:52:32 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/01 22:52:01 by tdharmar         ###   ########.fr       */
+/*   Created: 2025/12/02 21:10:16 by tdharmar          #+#    #+#             */
+/*   Updated: 2025/12/02 21:16:50 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fdf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+bool	is_valid_file_type(char *filename)
 {
-	if (!s)
-		return ;
-	if (write(fd, s, ft_strlen(s)) < 0)
-		return ;
+	size_t	len;
+
+	len = ft_strlen(filename);
+	if (len < 5)
+		return (false);
+	if (ft_strncmp(&filename[len - 4], ".fdf", 5) != 0)
+		return (false);
+	return (true);
 }

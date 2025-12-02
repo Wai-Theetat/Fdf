@@ -23,7 +23,7 @@ void	ft_putnbr_hs(unsigned int nb)
 		ft_putnbr_hs(n % 16);
 	}
 	else
-		write(1, &"0123456789abcdef"[n], 1);
+		ft_putchar_fd("0123456789abcdef"[n], 1);
 }
 
 void	ft_putnbr_hb(unsigned int nb)
@@ -37,7 +37,7 @@ void	ft_putnbr_hb(unsigned int nb)
 		ft_putnbr_hb(n % 16);
 	}
 	else
-		write(1, &"0123456789ABCDEF"[n], 1);
+		ft_putchar_fd("0123456789ABCDEF"[n], 1);
 }
 
 int	ft_print_hex(unsigned int nb, char format)

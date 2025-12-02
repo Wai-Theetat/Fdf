@@ -23,7 +23,7 @@ void	ft_put_ptr_hex(unsigned long nb)
 		ft_put_ptr_hex(n % 16);
 	}
 	else
-		write(1, &"0123456789abcdef"[n], 1);
+		ft_putchar_fd("0123456789abcdef"[n], 1);
 }
 
 int	ft_print_ptr_hex(unsigned long nb)

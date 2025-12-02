@@ -21,7 +21,7 @@ int	ft_print_str(char *str)
 		return (ft_print_str("(null)"));
 	while (str[cnt])
 	{
-		write(1, &str[cnt], 1);
+		ft_putchar_fd(str[cnt], 1);
 		cnt++;
 	}
 	return (cnt);

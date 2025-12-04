@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/02 21:37:07 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/04 11:21:46 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # include <fcntl.h>
 # include <math.h>
 
+# define WIDTH 1920
+# define HEIGHT 1080
 
 # define FORMAT_ERR_MSG "Error:Invalid format : ./fdf <filename>.fdf"
 
@@ -41,9 +43,20 @@ typedef struct s_point_2D
 	unsigned int	rgba;
 }	t_point_2D;
 
+typedef struct s_map
+{
+
+}	t_map;
+
+
+typedef struct s_fdf
+{
+	mlx_t		*mlx;
+	mlx_image_t	*screen;
+	t_map		*map;
+}	t_fdf;
 
 void	exit_error(char *err_msg);
 bool	is_valid_file_type(char *filename);
-
 
 #endif

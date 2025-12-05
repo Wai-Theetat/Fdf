@@ -6,7 +6,7 @@
 #    By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/23 11:40:51 by tdharmar          #+#    #+#              #
-#    Updated: 2025/12/02 21:16:13 by tdharmar         ###   ########.fr        #
+#    Updated: 2025/12/05 11:05:48 by tdharmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ $(MLX42)        :   $(MLX42_DIR)
 	@cp $(MLX42_DIR)/build/$(MLX42) .
 
 $(MLX42_DIR)	:
-#	@git clone https://github.com/codam-coding-college/MLX42.git ${MLX42_DIR}
+#	 @git clone https://github.com/codam-coding-college/MLX42.git ${MLX42_DIR}
 
 
 clean:

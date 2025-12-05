@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 12:45:20 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/05 13:50:15 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,11 @@ typedef struct s_map
 {
 	int			row;
 	int			col;
-	int			high;
+	int			lowest;
+	int			highest;
 	t_point_2D	**map_2d;
 	t_point_3D	**map_3d;
+	char		***map_str;
 }	t_map;
 
 
@@ -72,9 +74,12 @@ bool	is_valid_file_type(char *filename);
 //Initialize
 t_fdf 	*init_fdf(char *file);
 t_map	*parse_dime(char *file);
-
+void	parse_map(t_map *map, char *file);
 
 //Misc
 int	ft_word_count(const char *str, char c);
+int ft_min(int a, int b);
+int ft_max(int a, int b);
+
 
 #endif

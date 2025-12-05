@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 11:40:05 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 13:08:21 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/05 13:31:06 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ void	init_map_value(t_map *map)
 {
 	map->row = 0;
 	map->col = 0;
-	map->high = INT_MIN;
+	map->highest = INT_MIN;
+	map->lowest = INT_MAX;
 	map->map_2d = NULL;
 	map->map_3d = NULL;
+	map->map_str = NULL;
 }
 
 void	init_map_dime(t_map *map, int fd)

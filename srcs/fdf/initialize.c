@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 11:40:05 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 13:31:06 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/05 15:19:38 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_fdf *init_fdf(char *file)
 
 	env.map = parse_dime(file);
 	parse_map(env.map, file);
+	create_point_n_spacing(env.map);
 }
 
 void	init_map_value(t_map *map)
@@ -26,6 +27,7 @@ void	init_map_value(t_map *map)
 	map->col = 0;
 	map->highest = INT_MIN;
 	map->lowest = INT_MAX;
+	map->spacing = 0;
 	map->map_2d = NULL;
 	map->map_3d = NULL;
 	map->map_str = NULL;

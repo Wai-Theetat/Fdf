@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 11:54:10 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/09/23 14:55:34 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:07:12 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ char	*ft_read_more(int fd)
 		buf[bytes_read] = '\0';
 		result = ft_append_str(result, buf, bytes_read);
 		if (!result)
-			return (NULL);
+			return (free(buf), NULL);
 		if (ft_strchr(buf, '\n'))
 			break ;
 		bytes_read = read(fd, buf, BUFFER_SIZE);
 	}
 	free(buf);
+	if (bytes_read < 0)
+		return (free(result), NULL);
 	return (result);
 }
 
@@ -53,7 +55,10 @@ char	*ft_update_buf(int fd, char *txt)
 	}
 	updated = ft_read_more(fd);
 	if (!updated)
+	{
+		free(txt);
 		return (NULL);
+	}
 	result = ft_append_str(txt, updated, ft_strlen(updated));
 	free(updated);
 	return (result);
@@ -101,18 +106,25 @@ char	*ft_trim_first_line(char *txt)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer[OPEN_FD_SIZE];
+	char		**buffer;
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffer[fd] = ft_update_buf(fd, buffer[fd]);
-	if (!buffer[fd])
+	buffer = get_buffer_ref(fd);
+	if (!buffer)
 		return (NULL);
-	line = ft_get_first_line(buffer[fd]);
+	*buffer = ft_update_buf(fd, *buffer);
+	if (!*buffer)
+		return (NULL);
+	line = ft_get_first_line(*buffer);
 	if (!line)
+	{
+		free(*buffer);
+		*buffer = NULL;
 		return (NULL);
-	buffer[fd] = ft_trim_first_line(buffer[fd]);
+	}
+	*buffer = ft_trim_first_line(*buffer);
 	if (line[0] == '\0')
 		return (free(line), NULL);
 	return (line);

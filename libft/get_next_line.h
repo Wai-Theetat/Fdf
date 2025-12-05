@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 11:54:31 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/10/16 18:49:16 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/05 12:31:18 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 # define OPEN_FD_SIZE 1024
 
-# include "libft.h"
+# include "../libft/libft.h"
 
 char	*get_next_line(int fd);
 char	*ft_read_more(int fd);
@@ -28,5 +28,7 @@ char	*ft_trim_first_line(char *txt);
 
 //Utils
 char	*ft_append_str(char *fst, char *snd, size_t sndlen);
+char	**get_buffer_ref(int fd);
+void	gnl_cleanup(int fd);
 
 #endif

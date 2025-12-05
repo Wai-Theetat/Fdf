@@ -6,14 +6,14 @@
 #    By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/23 11:40:51 by tdharmar          #+#    #+#              #
-#    Updated: 2025/12/05 11:05:48 by tdharmar         ###   ########.fr        #
+#    Updated: 2025/12/05 12:34:50 by tdharmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			:=	fdf
 
 CC				:=	cc
-CFLAGS			:=	-Wall -Wextra -Werror
+CFLAGS			:=	#-Wall -Wextra -Werror
 
 LDFLAGS			:=	-ldl -lglfw -pthread -lm
 
@@ -21,7 +21,8 @@ INC_DIR			:=	includes/
 SRC_DIR			:=	srcs/
 
 SRCS_FILES		:=	main.c \
-					utils/error_handle.c utils/valid_checker.c
+					fdf/initialize.c		fdf/parser.c\
+					utils/error_handle.c	utils/valid_checker.c
 
 SRCS			:=	$(SRCS_FILES:%.c=$(SRC_DIR)%.c)
 OBJS			:=	$(SRCS:%.c=%.o)

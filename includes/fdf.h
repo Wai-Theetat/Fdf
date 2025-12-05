@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 11:44:51 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/05 12:45:20 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@
 # define WIDTH 1920
 # define HEIGHT 1080
 
-# define FORMAT_ERR_MSG "Error:Invalid format : ./fdf <filename>.fdf"
+# define ERR_FORMAT_MSG "Error:Invalid format : ./fdf <filename>.fdf"
+# define ERR_FILE_MSG "Error: File cannot opened"
+# define ERR_MAL_MSG "Error: Failed to malloc"
+# define ERR_MAP_MSG "Error: Invalid map"
 
 typedef struct s_point_3D
 {
@@ -49,21 +52,8 @@ typedef struct s_map
 	int			row;
 	int			col;
 	int			high;
-	int			low;
-	bool		use_z_color;
-	double		x_offset;
-	double		y_offset;
-	double		interval;
-	double		alpha;
-	double		beta;
-	double		x_rotate;
-	double		y_rotate;
-	double		z_rotate;
-	double		zoom;
-	double		z_scale;
-	t_point_2D	**map2d;
-	t_point_3D	**map3d;
-	char		***map_str;
+	t_point_2D	**map_2d;
+	t_point_3D	**map_3d;
 }	t_map;
 
 
@@ -75,6 +65,16 @@ typedef struct s_fdf
 }	t_fdf;
 
 void	exit_error(char *err_msg);
+void	exit_map(t_map *m, int fd, char *err_msg);
+
 bool	is_valid_file_type(char *filename);
+
+//Initialize
+t_fdf 	*init_fdf(char *file);
+t_map	*parse_dime(char *file);
+
+
+//Misc
+int	ft_word_count(const char *str, char c);
 
 #endif

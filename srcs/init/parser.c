@@ -6,13 +6,13 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 12:01:11 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 14:33:25 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:39:40 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static void update_map_HL(t_map *m)
+static void	update_map_hl(t_map *m)
 {
 	int	row;
 	int	col;
@@ -55,9 +55,9 @@ t_map	*parse_dime(char *file)
 
 void	parse_map(t_map *map, char *file)
 {
-	int	fd;
-	char *line;
-	int	row;
+	int		fd;
+	char	*line;
+	int		row;
 
 	row = -1;
 	fd = open(file, O_RDONLY);
@@ -79,6 +79,5 @@ void	parse_map(t_map *map, char *file)
 		free(line);
 	}
 	gnl_cleanup(fd);
-	update_map_HL(map);
+	update_map_hl(map);
 }
-

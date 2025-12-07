@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 14:28:48 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 14:30:14 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:29:18 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	free_map(t_map *map)
 	if (!map)
 		return ;
 	if (map->map_2d)
-		free_map2D(map->map_2d, map->row);
+		free_map2d(map->map_2d, map->row);
 	if (map->map_3d)
 		free_map3d(map->map_3d, map->row);
 	if (map->map_str)

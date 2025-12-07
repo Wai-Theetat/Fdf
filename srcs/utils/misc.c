@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 12:43:06 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 13:47:48 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:33:51 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_word_count(const char *str, char c)
 	return (count);
 }
 
-int ft_min(int a, int b)
+int	ft_min(int a, int b)
 {
 	if (a < b)
 		return (a);
@@ -41,7 +41,7 @@ int ft_min(int a, int b)
 		return (b);
 }
 
-int ft_max(int a, int b)
+int	ft_max(int a, int b)
 {
 	if (a > b)
 		return (a);

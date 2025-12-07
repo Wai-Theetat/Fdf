@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   valid_checker.c                                    :+:      :+:    :+:   */
+/*   cal_n_con.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/02 21:10:16 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/07 14:33:03 by tdharmar         ###   ########.fr       */
+/*   Created: 2025/12/07 14:21:09 by tdharmar          #+#    #+#             */
+/*   Updated: 2025/12/07 14:30:26 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-bool	is_valid_file_type(char *filename)
+double	calc_x(int col, t_map *map)
 {
-	size_t	len;
 
-	len = ft_strlen(filename);
-	if (len < 5)
-		return (false);
-	if (ft_strncmp(&filename[len - 4], ".fdf", 5) != 0)
-		return (false);
-	return (true);
+
 }

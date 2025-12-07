@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   valid_checker.c                                    :+:      :+:    :+:   */
+/*   fill_3D.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/02 21:10:16 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/07 14:33:03 by tdharmar         ###   ########.fr       */
+/*   Created: 2025/12/07 13:54:54 by tdharmar          #+#    #+#             */
+/*   Updated: 2025/12/07 14:37:40 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-bool	is_valid_file_type(char *filename)
+void	convert_point_to_3d(t_map *map)
 {
-	size_t	len;
+	int			row;
+	int			col;
+	t_point_3D	*point;
+	double		z;
 
-	len = ft_strlen(filename);
-	if (len < 5)
-		return (false);
-	if (ft_strncmp(&filename[len - 4], ".fdf", 5) != 0)
-		return (false);
-	return (true);
+	row = 0;
+	while (row++ < map->row)
+	{
+		col = 0;
+		while (col++ < map->col)
+		{
+			point = &(map->map_3d[row][col]);
+			point->x = calc_x(col, map);
+			//point->y = calc_y();
+			//z = ...
+			//point->z = z
+			//point->pre_def_color = conv_rgba();
+		}
+	}
 }

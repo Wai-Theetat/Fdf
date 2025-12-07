@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:06:12 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 14:30:24 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:32:51 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ void	exit_map(t_map *m, int fd, char *err_msg)
 		close(fd);
 	exit_error(err_msg);
 }
-

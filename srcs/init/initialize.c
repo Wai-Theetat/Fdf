@@ -6,19 +6,24 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 11:40:05 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 15:19:38 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:38:16 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-t_fdf *init_fdf(char *file)
+t_fdf	*init_fdf(char *file)
 {
 	static t_fdf	env;
 
 	env.map = parse_dime(file);
 	parse_map(env.map, file);
 	create_point_n_spacing(env.map);
+	convert_point_to_3D(env.map);
+	//set_altitude_color()
+	//adjust_windows()
+	//initiate_mlx()
+	return (&env);
 }
 
 void	init_map_value(t_map *map)

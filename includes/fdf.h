@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/05 15:17:37 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:37:04 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ typedef struct s_point_3D
 	double			x;
 	double			y;
 	double			z;
-	unsigned int	map_color;
-	unsigned int	z_color;
+	unsigned int	pred_def_color;
+	unsigned int	altitude_color;
 }	t_point_3D;
 
 typedef struct s_point_2D
@@ -59,7 +59,6 @@ typedef struct s_map
 	char		***map_str;
 }	t_map;
 
-
 typedef struct s_fdf
 {
 	mlx_t		*mlx;
@@ -73,14 +72,21 @@ void	exit_map(t_map *m, int fd, char *err_msg);
 bool	is_valid_file_type(char *filename);
 
 //Initialize
-t_fdf 	*init_fdf(char *file);
+t_fdf	*init_fdf(char *file);
 t_map	*parse_dime(char *file);
+void	init_map_value(t_map *map);
+void	init_map_dime(t_map *map, int fd);
 void	parse_map(t_map *map, char *file);
+void	create_point_n_spacing(t_map *map);
+void	convert_point_to_3d(t_map *map);
+
+//Convert and Calculation
+double	calc_x(int col, t_map *map);
 
 //Misc
-int	ft_word_count(const char *str, char c);
-int ft_min(int a, int b);
-int ft_max(int a, int b);
+int		ft_word_count(const char *str, char c);
+int		ft_min(int a, int b);
+int		ft_max(int a, int b);
 
 //Free
 // Map

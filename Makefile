@@ -6,7 +6,7 @@
 #    By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/23 11:40:51 by tdharmar          #+#    #+#              #
-#    Updated: 2025/12/05 12:34:50 by tdharmar         ###   ########.fr        #
+#    Updated: 2025/12/07 14:28:41 by tdharmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,9 @@ INC_DIR			:=	includes/
 SRC_DIR			:=	srcs/
 
 SRCS_FILES		:=	main.c \
-					fdf/initialize.c		fdf/parser.c\
-					utils/error_handle.c	utils/valid_checker.c
-
+					init/initialize.c				init/parser.c					init/create_map.c			init/fill_3D.c\
+					init/cal_n_con.c\
+					utils/error_handle.c	utils/valid_checker.c	utils/free_map.c	utils/misc.c
 SRCS			:=	$(SRCS_FILES:%.c=$(SRC_DIR)%.c)
 OBJS			:=	$(SRCS:%.c=%.o)
 

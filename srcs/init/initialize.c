@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 11:40:05 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/07 14:38:16 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/10 22:10:55 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_fdf	*init_fdf(char *file)
 	env.map = parse_dime(file);
 	parse_map(env.map, file);
 	create_point_n_spacing(env.map);
-	convert_point_to_3D(env.map);
+	convert_point_to_3d(env.map);
 	//set_altitude_color()
 	//adjust_windows()
 	//initiate_mlx()

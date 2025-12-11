@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:46:42 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 17:09:33 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 22:08:21 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(int argc, char **argv)
 {
+	int		i;
 	t_fdf	*env;
 
 	if (argc != 2 || !is_valid_file_type(argv[1]))
@@ -24,5 +25,9 @@ int	main(int argc, char **argv)
 		mlx_terminate(env->mlx);
 		exit_map(env->map, -1, ERR_MLX_MSG);
 	}
+	// draw_map(env);
+	// mlx_key_hook(env->mlx, key_hook, env);
+	// mlx_terminate(env->mlx);
+	// free_map(env->map);
 	return (0);
 }

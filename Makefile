@@ -6,7 +6,7 @@
 #    By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/23 11:40:51 by tdharmar          #+#    #+#              #
-#    Updated: 2025/12/11 14:23:34 by tdharmar         ###   ########.fr        #
+#    Updated: 2025/12/11 16:12:23 by tdharmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC_DIR			:=	srcs/
 
 SRCS_FILES		:=	main.c \
 					init/initialize.c		init/parser.c			init/create_map.c			init/fill_3D.c\
-					init/set_color.c  
+					init/set_color.c		init/window.c \
 					utils/error_handle.c	utils/valid_checker.c	utils/free_map.c \
 					utils/misc.c			utils/color.c			init/cal_n_con.c
 

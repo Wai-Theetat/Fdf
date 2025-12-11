@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 14:38:10 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 16:09:10 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,13 @@ typedef struct s_map
 	int			lowest;
 	int			highest;
 	double		spacing;
+	double		zoom;
+    int			shift_x;
+    int			shift_y;
+    double		angle_x;
+    double		angle_y;
+	double		angle_z;
+	double		z_scale;
 	t_point_2D	**map_2d;
 	t_point_3D	**map_3d;
 	char		***map_str;
@@ -83,6 +90,7 @@ void	init_map_dime(t_map *map, int fd);
 void	parse_map(t_map *map, char *file);
 void	create_point_n_spacing(t_map *map);
 void	convert_point_to_3d(t_map *map);
+void	adjust_window(t_map *map);
 
 //Convert and Calculation
 double	calc_x(int col_in, t_map *map);
@@ -101,6 +109,7 @@ void	set_altitude_color(t_map *map);
 int		ft_word_count(const char *str, char c);
 int		ft_min(int a, int b);
 int		ft_max(int a, int b);
+int		ft_abs(int a);
 
 //Free
 // Map

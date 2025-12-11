@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 14:22:17 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 14:38:10 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@
 # define ERR_MAP_MSG "Error: Invalid map"
 
 # define WHITE 0xFFFFFFFF
+# define COLOR_LOW 0x0000FFFF  // Blue
+# define COLOR_HIGH 0xFF0000FF // Red
 
 typedef struct s_point_3D
 {

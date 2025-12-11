@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:21:10 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 14:23:30 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 15:18:35 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,4 @@
 
 void	set_altitude_color(t_map *map)
 {
-	
 }

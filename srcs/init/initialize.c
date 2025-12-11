@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 11:40:05 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 16:12:05 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 17:09:06 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 t_fdf	*init_fdf(char *file)
 {
-	static t_fdf	env;
+	static t_fdf	fdf;
 
-	env.map = parse_dime(file);
-	parse_map(env.map, file);
-	create_point_n_spacing(env.map);
-	convert_point_to_3d(env.map);
-	set_altitude_color(env.map);
-	adjust_window(env.map);
-	//initiate_mlx()
-	return (&env);
+	fdf.map = parse_dime(file);
+	parse_map(fdf.map, file);
+	create_point_n_spacing(fdf.map);
+	convert_point_to_3d(fdf.map);
+	set_altitude_color(fdf.map);
+	adjust_window(fdf.map);
+	fdf.mlx = mlx_init(WIDTH, HEIGHT, "FDF", true);
+	if (!fdf.mlx)
+		exit_map(fdf.map, -1, ERR_MLX_MSG);
+	fdf.screen = mlx_new_image(fdf.mlx, WIDTH, HEIGHT);
+	return (&fdf);
 }
 
 void	init_map_value(t_map *map)

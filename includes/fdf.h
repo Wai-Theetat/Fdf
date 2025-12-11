@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 16:09:10 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 17:07:38 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 # define ERR_FILE_MSG "Error: File cannot opened"
 # define ERR_MAL_MSG "Error: Failed to malloc"
 # define ERR_MAP_MSG "Error: Invalid map"
+# define ERR_MLX_MSG "Error: MLX Failed"
 
 # define WHITE 0xFFFFFFFF
 # define COLOR_LOW 0x0000FFFF  // Blue
@@ -91,6 +92,7 @@ void	parse_map(t_map *map, char *file);
 void	create_point_n_spacing(t_map *map);
 void	convert_point_to_3d(t_map *map);
 void	adjust_window(t_map *map);
+void	initiate_mlx(t_fdf *fdf);
 
 //Convert and Calculation
 double	calc_x(int col_in, t_map *map);

@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/10 22:18:00 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 14:22:17 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@
 # define ERR_FILE_MSG "Error: File cannot opened"
 # define ERR_MAL_MSG "Error: Failed to malloc"
 # define ERR_MAP_MSG "Error: Invalid map"
+
+# define WHITE 0xFFFFFFFF
 
 typedef struct s_point_3D
 {
@@ -84,6 +86,14 @@ void	convert_point_to_3d(t_map *map);
 double	calc_x(int col_in, t_map *map);
 double	calc_y(int row_in, t_map *map);
 double	conv_rgba(char *point, t_map *map);
+
+// color
+int		get_hex_val(char c);
+int		ft_atoi_base_hex(const char *str);
+void	str_to_upper(char *str);
+
+// set-color
+void	set_altitude_color(t_map *map);
 
 //Misc
 int		ft_word_count(const char *str, char c);

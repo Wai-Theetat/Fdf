@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 14:21:09 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/10 22:19:42 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/11 14:20:40 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,15 @@ double	conv_rgba(char *point, t_map *map)
 	int	rgba;
 
 	i = 0;
-	while (point[i] >= '0' && point[i] <= 9)
+	while (point[i] && (ft_isdigit(point[i]) || point[i] == '-'))
+		i++;
+	if (point[i] != ',')
+		return (WHITE);
+	if (ft_strncmp(&point[i], ",0x", 3) != 0
+		&& ft_strncmp(&point[i], ",0X", 3) != 0)
+		exit_map(map, -1, ERR_MAP_MSG);
+	i += 3;
+	str_to_upper(&point[i]);
+	rgba = ft_atoi_base_hex(&point[i]);
+	return ((rgba << 8) | 0xFF);
 }

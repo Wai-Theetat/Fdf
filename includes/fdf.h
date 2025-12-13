@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 17:07:38 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/13 15:39:09 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,9 @@ void	parse_map(t_map *map, char *file);
 void	create_point_n_spacing(t_map *map);
 void	convert_point_to_3d(t_map *map);
 void	adjust_window(t_map *map);
-void	initiate_mlx(t_fdf *fdf);
+
+//Drawing
+void	draw_map(t_fdf *env);
 
 //Convert and Calculation
 double	calc_x(int col_in, t_map *map);

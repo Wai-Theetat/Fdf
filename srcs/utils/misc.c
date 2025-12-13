@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 12:43:06 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 16:07:32 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/13 15:41:22 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_max(int a, int b)
 		return (b);
 }
 
-int ft_abs(int a)
+int	ft_abs(int a)
 {
 	if (a < 0)
 		return (a * -1);

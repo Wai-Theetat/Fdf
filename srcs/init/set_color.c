@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:21:10 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 15:33:29 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/13 15:47:58 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ static int	get_color(int z, t_map *map)
 		return (COLOR_LOW);
 	percentage = (double)(z - map->lowest) / (map->highest - map->lowest);
 	red = get_light((COLOR_LOW >> 24) & 0xFF, \
-					(COLOR_HIGH >> 24) & 0xFF, percentage);
+(COLOR_HIGH >> 24) & 0xFF, percentage);
 	green = get_light((COLOR_LOW >> 16) & 0xFF, \
-					(COLOR_HIGH >> 16) & 0xFF, percentage);
+(COLOR_HIGH >> 16) & 0xFF, percentage);
 	blue = get_light((COLOR_LOW >> 8) & 0xFF, \
-					(COLOR_HIGH >> 8) & 0xFF, percentage);
+(COLOR_HIGH >> 8) & 0xFF, percentage);
 	return ((red << 24) | (green << 16) | (blue << 8) | 0xFF);
 }
 

@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 11:40:05 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/11 17:09:06 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/13 15:43:11 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ void	init_map_value(t_map *map)
 	map->lowest = INT_MAX;
 	map->spacing = 0;
 	map->zoom = 0;
-    map->shift_x = 0;
-    map->shift_y = 0;
-    map->angle_x = 0;
-    map->angle_y = 0;
+	map->shift_x = 0;
+	map->shift_y = 0;
+	map->angle_x = 0;
+	map->angle_y = 0;
 	map->angle_z = 0;
 	map->z_scale = 1.0;
 	map->map_2d = NULL;

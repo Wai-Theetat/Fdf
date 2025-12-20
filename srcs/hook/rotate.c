@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 16:42:16 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/20 16:42:36 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/20 16:56:45 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ static void	rot_z(double *x, double *y, double angle)
 
 void	rotate_xyz(double *x, double *y, double *z, t_map *map)
 {
-	if (map->angle_x != 0)
-		rot_x(y, z, map->angle_x);
-	if (map->angle_y != 0)
-		rot_y(x, z, map->angle_y);
+	// if (map->angle_x != 0)
+	// 	rot_x(y, z, map->angle_x);
+	// if (map->angle_y != 0)
+	// 	rot_y(x, z, map->angle_y);
 	if (map->angle_z != 0)
 		rot_z(x, y, map->angle_z);
 }

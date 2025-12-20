@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/13 15:39:09 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/20 16:44:34 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,16 @@ void	convert_point_to_3d(t_map *map);
 void	adjust_window(t_map *map);
 
 //Drawing
-void	draw_map(t_fdf *env);
+void	draw_map(t_fdf *fdf);
+void	draw_line(t_fdf *fdf, t_point_3D p1, t_point_3D p2);
+void	iso_project(double *x, double *y, double z, t_map *map);
+
+// Hooks
+void	key_hook(mlx_key_data_t keydata, void *param);
+void	clear_image(t_fdf *env);
+
+// Rotate
+void	rotate_xyz(double *x, double *y, double *z, t_map *map);
 
 //Convert and Calculation
 double	calc_x(int col_in, t_map *map);

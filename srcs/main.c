@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:46:42 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/13 16:18:20 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/20 16:30:18 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ int	main(int argc, char **argv)
 		exit_map(env->map, -1, ERR_MLX_MSG);
 	}
 	draw_map(env);
-	// mlx_key_hook(env->mlx, key_hook, env);
-	// mlx_terminate(env->mlx);
+	mlx_key_hook(env->mlx, key_hook, env);
+	mlx_loop(env->mlx);
+	mlx_terminate(env->mlx);
 	free_map(env->map);
 	return (0);
 }

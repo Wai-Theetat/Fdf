@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/20 16:44:34 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:24:49 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,16 @@ typedef struct s_map
 	int			highest;
 	double		spacing;
 	double		zoom;
-    int			shift_x;
-    int			shift_y;
-    double		angle_x;
-    double		angle_y;
+	int			shift_x;
+	int			shift_y;
+	double		angle_x;
+	double		angle_y;
 	double		angle_z;
 	double		z_scale;
 	t_point_2D	**map_2d;
 	t_point_3D	**map_3d;
 	char		***map_str;
+	bool		color_mode;
 }	t_map;
 
 typedef struct s_fdf
@@ -103,7 +104,7 @@ void	key_hook(mlx_key_data_t keydata, void *param);
 void	clear_image(t_fdf *env);
 
 // Rotate
-void	rotate_xyz(double *x, double *y, double *z, t_map *map);
+void	rotate(double *x, double *y, t_map *map);
 
 //Convert and Calculation
 double	calc_x(int col_in, t_map *map);

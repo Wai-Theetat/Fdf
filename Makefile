@@ -6,14 +6,14 @@
 #    By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/23 11:40:51 by tdharmar          #+#    #+#              #
-#    Updated: 2025/12/20 16:45:19 by tdharmar         ###   ########.fr        #
+#    Updated: 2025/12/22 10:28:10 by tdharmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			:=	fdf
 
 CC				:=	cc
-CFLAGS			:=	#-Wall -Wextra -Werror
+CFLAGS			:=	-Wall -Wextra -Werror
 
 LDFLAGS			:=	-ldl -lglfw -pthread -lm
 
@@ -55,7 +55,7 @@ $(MLX42)        :   $(MLX42_DIR)
 	@cp $(MLX42_DIR)/build/$(MLX42) .
 
 $(MLX42_DIR)	:
-#	 @git clone https://github.com/codam-coding-college/MLX42.git ${MLX42_DIR}
+	 @git clone https://github.com/codam-coding-college/MLX42.git ${MLX42_DIR}
 
 
 clean:
@@ -65,7 +65,7 @@ clean:
 fclean: clean
 	rm -f ${NAME}
 	rm -rf libft.a $(MLX42)
-#	rm -rf $(MLX42_DIR)
+	rm -rf $(MLX42_DIR)
 	@make -C libft fclean
 
 re: fclean all

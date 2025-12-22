@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:46:42 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/20 16:30:18 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:22:54 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	main(int argc, char **argv)
 {
-	int		i;
 	t_fdf	*env;
 
 	if (argc != 2 || !is_valid_file_type(argv[1]))

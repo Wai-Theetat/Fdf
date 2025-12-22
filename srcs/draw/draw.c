@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 15:37:31 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/22 10:44:56 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/22 11:03:29 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	draw_line(t_fdf *env, t_point_3D p1, t_point_3D p2)
 	double	max;
 	int		color;
 
-	rotate(&p1.x, &p1.y, env->map);
-	rotate(&p2.x, &p2.y, env->map);
+	rotate_xyz(&p1.x, &p1.y, &p1.z, env->map);
+	rotate_xyz(&p2.x, &p2.y, &p2.z, env->map);
 	iso_project(&p1.x, &p1.y, p1.z, env->map);
 	iso_project(&p2.x, &p2.y, p2.z, env->map);
 	x_step = p2.x - p1.x;

@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 14:31:52 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/22 10:27:28 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/22 11:09:32 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,24 +31,28 @@ static void	hook_translate(mlx_key_data_t keydata, t_fdf *env)
 
 static void	hook_controls(mlx_key_data_t keydata, t_fdf *env)
 {
-	if (keydata.key == MLX_KEY_Q)
+	if (keydata.key == MLX_KEY_A)
+		env->map->angle_x -= 0.05;
+	else if (keydata.key == MLX_KEY_D)
+		env->map->angle_x += 0.05;
+	else if (keydata.key == MLX_KEY_W)
+		env->map->angle_y -= 0.05;
+	else if (keydata.key == MLX_KEY_S)
+		env->map->angle_y += 0.05;
+	else if (keydata.key == MLX_KEY_Q)
 		env->map->angle_z -= 0.05;
 	else if (keydata.key == MLX_KEY_E)
 		env->map->angle_z += 0.05;
-	else if (keydata.key == MLX_KEY_W)
-		env->map->z_scale += 0.1;
-	else if (keydata.key == MLX_KEY_S)
-		env->map->z_scale -= 0.1;
-	else if (keydata.key == MLX_KEY_SPACE && keydata.action == MLX_PRESS)
-		env->map->color_mode = !env->map->color_mode;
 }
 
-static void	hook_zoom(mlx_key_data_t keydata, t_fdf *env)
+static void	hook_cnz(mlx_key_data_t keydata, t_fdf *env)
 {
 	if (keydata.key == MLX_KEY_EQUAL)
 		env->map->zoom += 0.05;
 	else if (keydata.key == MLX_KEY_MINUS)
 		env->map->zoom -= 0.05;
+	else if (keydata.key == MLX_KEY_SPACE && keydata.action == MLX_PRESS)
+		env->map->color_mode = !env->map->color_mode;
 }
 
 void	key_hook(mlx_key_data_t keydata, void *param)
@@ -62,7 +66,7 @@ void	key_hook(mlx_key_data_t keydata, void *param)
 		mlx_close_window(env->mlx);
 	hook_translate(keydata, env);
 	hook_controls(keydata, env);
-	hook_zoom(keydata, env);
+	hook_cnz(keydata, env);
 	clear_image(env);
 	draw_map(env);
 }

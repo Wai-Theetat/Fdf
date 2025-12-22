@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:47:40 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/22 10:24:49 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/22 11:02:48 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	key_hook(mlx_key_data_t keydata, void *param);
 void	clear_image(t_fdf *env);
 
 // Rotate
-void	rotate(double *x, double *y, t_map *map);
+void	rotate_xyz(double *x, double *y, double *z, t_map *map);
 
 //Convert and Calculation
 double	calc_x(int col_in, t_map *map);

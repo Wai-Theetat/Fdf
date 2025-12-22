@@ -6,7 +6,7 @@
 #    By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/23 11:40:51 by tdharmar          #+#    #+#              #
-#    Updated: 2025/12/22 10:45:39 by tdharmar         ###   ########.fr        #
+#    Updated: 2025/12/22 10:55:33 by tdharmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ MLX42_INC_DIR	:=	$(MLX42_DIR)/include/
 MLX42			:=	libmlx42.a
 
 
-all: $(NAME) Makefile
+all: mlx $(NAME) Makefile
 
 $(NAME): $(OBJS) Makefile $(MLX42)
 	@make -C libft
@@ -71,6 +71,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re mlx
-
-
-#sed -i 's|/bin/bash|/usr/bin/env bash|' MLX42/tools/compile_shader.sh

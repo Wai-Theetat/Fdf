@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 15:37:31 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/22 10:26:13 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:44:56 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	draw_line(t_fdf *env, t_point_3D p1, t_point_3D p2)
 	max = ft_max(ft_abs((int)x_step), ft_abs((int)y_step));
 	x_step /= max;
 	y_step /= max;
-	if (env->map->color_mode && p1.pre_def_color != WHITE)
+	if (env->map->color_mode)
 		color = p1.pre_def_color;
 	else
 		color = p1.altitude_color;

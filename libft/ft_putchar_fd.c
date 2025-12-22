@@ -6,14 +6,14 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 17:51:00 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/01 22:50:02 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/12/22 11:12:07 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    if (write(fd, &c, 1) < 0)
-        return ;
+	if (write(fd, &c, 1) < 0)
+		return ;
 }

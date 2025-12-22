@@ -3,7 +3,7 @@
 for my laptop
 
 ### Things to fix
-
+color grading is no dynamic it just snap to another color
 
 
 

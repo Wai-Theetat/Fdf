@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 15:37:31 by tdharmar          #+#    #+#             */
-/*   Updated: 2026/01/05 11:03:36 by tdharmar         ###   ########.fr       */
+/*   Updated: 2026/01/05 11:04:02 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	iso_project(double *x, double *y, double z, t_map *map)
 
 static int	interpolate_channel(int start, int end, double t)
 {
-	return ((int)(start + t * (end - start)))=
+	return ((int)(start + t * (end - start)));
 }
 
 static int	interpolate_color(unsigned int start, unsigned int end, double t)

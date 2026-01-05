@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 14:31:52 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/12/22 11:09:32 by tdharmar         ###   ########.fr       */
+/*   Updated: 2026/01/05 10:17:47 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,17 @@ static void	hook_translate(mlx_key_data_t keydata, t_fdf *env)
 
 static void	hook_controls(mlx_key_data_t keydata, t_fdf *env)
 {
-	if (keydata.key == MLX_KEY_A)
+	if (keydata.key == MLX_KEY_S)
 		env->map->angle_x -= 0.05;
-	else if (keydata.key == MLX_KEY_D)
-		env->map->angle_x += 0.05;
 	else if (keydata.key == MLX_KEY_W)
+		env->map->angle_x += 0.05;
+	else if (keydata.key == MLX_KEY_A)
 		env->map->angle_y -= 0.05;
-	else if (keydata.key == MLX_KEY_S)
+	else if (keydata.key == MLX_KEY_D)
 		env->map->angle_y += 0.05;
-	else if (keydata.key == MLX_KEY_Q)
-		env->map->angle_z -= 0.05;
 	else if (keydata.key == MLX_KEY_E)
+		env->map->angle_z -= 0.05;
+	else if (keydata.key == MLX_KEY_Q)
 		env->map->angle_z += 0.05;
 }
 
